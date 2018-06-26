@@ -5,8 +5,7 @@ function init() {
 
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1Tbl9xsVBHD3VGjyAZo4-2hbMCHCOLU2tQTULNP9zTR0/edit?usp=sharing',
                    callback: function(data, tabletop) {
-                       console.log(data)
-                       let block = d3.select('#your-ideas-responses').selectAll('div')
+                       let block = d3.select('#your-ideas-responses').html('').selectAll('div')
                                      .data(data)
                                      .enter()
                                      .append('div')
@@ -34,6 +33,7 @@ function init() {
     const form = d3.select('#form');
     if (form.classed('show')){
       form.classed('show', false);
+      init();
     } else {
       form.classed('show', true);
     }
@@ -42,4 +42,3 @@ function init() {
 window.addEventListener('DOMContentLoaded', init)
 
 init();
-console.log('tester')

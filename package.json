@@ -19,7 +19,7 @@
   "author": "Lo Benichou",
   "license": "ISC",
   "dependencies": {
-    "d3": "^4.12.2",
+    "d3": "^4.13.0",
     "mapbox": "^1.0.0-beta9",
     "mapbox-gl": "^0.45.0",
     "tabletop": "^1.5.2"

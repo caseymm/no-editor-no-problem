@@ -16,7 +16,7 @@ function init() {
                             .classed('attribution', true)
                             .html(d => {
                               if(d.name_or_twitter[0] === '@'){
-                                return `<a href="https://twitter.com/${d.name_or_twitter.slice(1, d.name_or_twitter.length)}">${d.name_or_twitter}</a>`;
+                                return `<a href="https://twitter.com/${d.name_or_twitter.slice(1, d.name_or_twitter.length).split(' ')[0]}">${d.name_or_twitter}</a>`;
                               } else {
                                 if(d.name_or_twitter.length === 0){
                                   return 'Anonymous';
